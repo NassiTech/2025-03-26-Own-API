@@ -1,4 +1,22 @@
 {
+  "name": "2025-03-26-own-api",
+  "version": "1.0.0",
+  "main": "book-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NassiTech/2025-03-26-Own-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NassiTech/2025-03-26-Own-API/issues"
+  },
+  "homepage": "https://github.com/NassiTech/2025-03-26-Own-API#readme",
+  "description": "",
   "dependencies": {
     "express": "^4.21.2"
   }
