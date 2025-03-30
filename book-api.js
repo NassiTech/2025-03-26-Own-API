@@ -42,10 +42,11 @@ app.put("/books/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const books = readFile(); // Datei aufrufen
   const foundBook = books.find((book) => book.id == id);
+  const { author } = req.body;
 
   if (!foundBook) return res.status(404).json({ error: "Book not found" });
 
-  foundBook.author = newAuthor;
+  foundBook.author = author;
   res.json(foundBook);
   writeFile(books); // in Datei reinschreiben
 });
@@ -56,7 +57,14 @@ app.delete("/books/:id", (req, res) => {
   const index = books.findIndex((book) => book.id == id);
   const deletedBook = books.splice(index, 1);
   writeFile(books);
-  // res.json("successfully deleted" + deletedBook[].name)
+  res.json(deletedBook);
+});
+
+app.get("/books/search", (req, res) => {
+  const title = req.query.title;
+  const books = readFile();
+  const result = books.filter((books) => books.title == title);
+  res.json(result);
 });
 
 app.listen(5005);
