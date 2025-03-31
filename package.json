@@ -18,6 +18,7 @@
   "homepage": "https://github.com/NassiTech/2025-03-26-Own-API#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2"
   }
 }
